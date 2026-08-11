@@ -1,0 +1,33 @@
+{
+  "name": "redthread",
+  "version": "1.0.0",
+  "description": "Create polished red-thread dual-scene portrait collages from a single photo.",
+  "author": {
+    "name": "HuHana77",
+    "url": "https://github.com/HuHana77"
+  },
+  "homepage": "https://github.com/HuHana77/redthread",
+  "repository": "https://github.com/HuHana77/redthread",
+  "license": "MIT",
+  "keywords": ["photo collage", "portrait", "editorial", "red thread", "Japanese typography"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Redthread",
+    "shortDescription": "Turn one portrait into a poetic red-thread collage.",
+    "longDescription": "Redthread creates a finished 3:4 two-panel editorial collage from one user-supplied portrait. It preserves the real subject, reuses one canonical cutout in both scenes, derives a matching paper palette, adds bilingual hand-lettering, and connects corresponding subject anchors with a restrained wine-red pencil line.",
+    "developerName": "HuHana77",
+    "category": "Creative",
+    "capabilities": [],
+    "websiteURL": "https://github.com/HuHana77/redthread",
+    "privacyPolicyURL": "https://github.com/HuHana77/redthread/blob/main/PRIVACY.md",
+    "termsOfServiceURL": "https://github.com/HuHana77/redthread/blob/main/TERMS.md",
+    "defaultPrompt": [
+      "Use $redthread to turn this portrait into a red-thread dual-scene collage.",
+      "Create a poetic bilingual red-thread collage from this photo.",
+      "Revise my Redthread collage while preserving the subject and anchor."
+    ],
+    "brandColor": "#8F2634",
+    "composerIcon": "./assets/redthread-icon.svg",
+    "logo": "./assets/redthread-logo.svg"
+  }
+}
