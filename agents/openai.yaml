@@ -1,4 +1,0 @@
-interface:
-  display_name: "Redthread"
-  short_description: "将人物照片制作成由红线相连的主题纸纹双景拼图，并且只交付最终成品"
-  default_prompt: "使用 $redthread 将这张人物照片制作成双景拼图；红线优先连接上下人物对应的小指，小指不可见时连接同一轮廓尖端，并且只交付最终成品。"
