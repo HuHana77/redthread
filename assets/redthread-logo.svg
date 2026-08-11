@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 320" role="img" aria-label="Redthread logo">
+  <rect width="960" height="320" rx="48" fill="#F2EADF"/>
+  <path d="M66 102c63-65 143-46 147 15 3 51-67 61-71 15-3-37 54-48 96-8 52 49 32 133-35 144-56 9-102-33-84-75 16-37 76-34 82 8" fill="none" stroke="#8F2634" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="290" y="190" font-family="Georgia, serif" font-size="96" fill="#2F2926" letter-spacing="2">Redthread</text>
+</svg>
