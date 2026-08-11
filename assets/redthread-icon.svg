@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Redthread icon">
+  <rect width="256" height="256" rx="56" fill="#F2EADF"/>
+  <path d="M40 78C73 35 121 38 139 73c14 28-9 52-33 45-27-8-23-42 4-42 33 0 62 38 48 74-12 30-48 44-79 28-23-12-30-40-10-57 19-16 48-6 48 17 0 17-19 24-32 16" fill="none" stroke="#8F2634" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="40" cy="78" r="7" fill="#8F2634"/>
+  <circle cx="85" cy="154" r="7" fill="#8F2634"/>
+</svg>
