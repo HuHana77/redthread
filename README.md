@@ -1,6 +1,6 @@
 # Redthread
 
-Redthread 是一个把单张人物照片制作成 3:4 竖版红线双场景拼贴的 Codex Skill。上半部分保留原始环境，并将同一个人物剪影处理成暖白色发光轮廓；下半部分把真实人物放在从原图提取主题色的纤维纸上，再加入英日双语手写文字与酒红色彩铅红线，让两个场景形成呼应。
+Redthread 是一个兼容 Agent Skills 标准的图像创作 Skill，可用于豆包专业版、Codex 及其他支持 `SKILL.md` 的 Agent。它能把单张人物照片制作成 3:4 竖版红线双场景拼贴：上半部分保留原始环境，并将同一个人物剪影处理成暖白色发光轮廓；下半部分把真实人物放在从原图提取主题色的纤维纸上，再加入英日双语手写文字与酒红色彩铅红线，让两个场景形成呼应。
 
 ## 它能做什么
 
@@ -13,7 +13,19 @@ Redthread 是一个把单张人物照片制作成 3:4 竖版红线双场景拼�
 
 ## 安装
 
-### 方式一：让 Codex 安装（推荐）
+### 方式一：让豆包专业版安装（推荐）
+
+在豆包专业版的办公任务模式中，直接发送下面这句话：
+
+```text
+请安装 GitHub 上 HuHana77/redthread 仓库根目录的 redthread Skill，并读取根目录的 SKILL.md。
+```
+
+仓库根目录的 `SKILL.md` 是豆包专业版等 Agent 的直接安装入口。安装完成后，上传照片并说“用 redthread 把这张照片制作成红线双场景拼贴”即可调用。
+
+如果第一次搜索没有命中，请让豆包直接访问 GitHub 上的 `HuHana77/redthread` 仓库，不要只搜索 `redthread` 这个名称。
+
+### 方式二：让 Codex 安装
 
 直接对 Codex 说：
 
@@ -23,7 +35,7 @@ Use $skill-installer to install the skill at https://github.com/HuHana77/redthre
 
 安装完成后，在下一次 Codex 任务中即可使用。如果没有出现，请重启 Codex 后再试。
 
-### 方式二：手动安装
+### 方式三：手动安装
 
 ```bash
 git clone https://github.com/HuHana77/redthread.git
@@ -32,17 +44,6 @@ cp -R redthread/skills/redthread ~/.codex/skills/
 ```
 
 安装完成后，新开一个 Codex 任务。
-
-### 方式三：让豆包专业版安装
-
-在豆包专业版的办公任务模式中，直接发送：
-
-```text
-请安装这个 Skill：
-https://github.com/HuHana77/redthread/tree/main/skills/redthread
-```
-
-豆包专业版读取仓库中的 `SKILL.md` 后即可完成安装。安装完成后，上传照片并说“用 redthread 把这张照片制作成红线双场景拼贴”即可调用。
 
 ## 使用方式
 
@@ -62,13 +63,13 @@ https://github.com/HuHana77/redthread/tree/main/skills/redthread
 
 ## 使用条件
 
-- 需要具备图片编辑或合成能力的 Codex，或其他兼容运行环境。
+- 需要豆包专业版、Codex 或其他具备图片编辑或合成能力并支持 Agent Skills 的运行环境。
 - 需要由用户上传一张人物或生活方式照片。
 - 如果当前环境已有其他兼容图片后端，无需预先安装可选 Python 软件包。
 
 ## 隐私
 
-Skill 只使用用户提供的照片制作本次拼贴，不会要求 Codex 搜索、分享或公开原图。人物抠图、蒙版、红线图层和检查缩略图只作为私有工作文件，最终只展示一张成品 PNG。如果运行环境选择了外部图片生成或编辑服务，该服务会接收完成编辑所需的原图和指令。
+Skill 只使用用户提供的照片制作本次拼贴，不会要求运行它的 Agent 搜索、分享或公开原图。人物抠图、蒙版、红线图层和检查缩略图只作为私有工作文件，最终只展示一张成品 PNG。如果运行环境选择了外部图片生成或编辑服务，该服务会接收完成编辑所需的原图和指令。
 
 ## 许可与素材
 
