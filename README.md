@@ -25,6 +25,8 @@ Redthread 是一个兼容 Agent Skills 标准的图像创作 Skill，可用于�
 
 如果第一次搜索没有命中，请让豆包直接访问 GitHub 上的 `HuHana77/redthread` 仓库，不要只搜索 `redthread` 这个名称。
 
+Redthread 在豆包专业版中应直接使用办公任务模式已有的图片编辑或创意设计能力，不需要安装 Pillow、NumPy 或其他 Python 软件包。如果豆包开始检查或安装 Pillow，说明它正在使用错误的执行路线：请停止当前任务，删除旧版 Skill，重新安装最新版后新开一个办公任务。
+
 ### 方式二：让 Codex 安装
 
 直接对 Codex 说：
