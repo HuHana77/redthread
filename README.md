@@ -18,14 +18,14 @@ Redthread 是一个兼容 Agent Skills 标准的图像创作 Skill，可用于�
 在豆包专业版的办公任务模式中，直接发送下面这句话：
 
 ```text
-请安装 GitHub 上 HuHana77/redthread 仓库根目录的 redthread Skill，并读取根目录的 SKILL.md。
+请安装 GitHub 上 HuHana77/redthread 仓库根目录的 redthread Skill，并读取根目录的 SKILL.md。首次运行时，如果环境缺少 Pillow，我允许你在当前任务环境中安装一次 Pillow。请使用内置字体、纸张和红线素材进行确定性合成，不要调用生图模型生成最终图片。
 ```
 
 仓库根目录的 `SKILL.md` 是豆包专业版等 Agent 的直接安装入口。安装完成后，上传照片并说“用 redthread 把这张照片制作成红线双场景拼贴”即可调用。
 
 如果第一次搜索没有命中，请让豆包直接访问 GitHub 上的 `HuHana77/redthread` 仓库，不要只搜索 `redthread` 这个名称。
 
-Redthread 在豆包专业版中应直接使用办公任务模式已有的图片编辑或创意设计能力，不需要安装 Pillow、NumPy 或其他 Python 软件包。如果豆包开始检查或安装 Pillow，说明它正在使用错误的执行路线：请停止当前任务，删除旧版 Skill，重新安装最新版后新开一个办公任务。
+Redthread 在豆包专业版中使用 Pillow 精确渲染内置 DartsFont、纤维纸和红线模板。首次缺少 Pillow 时只安装一次；如果安装失败或超时，任务应停止并报告原因，不得改用生图模型制作近似版本。最终图片不应出现“豆包AI生成”水印。
 
 ### 方式二：让 Codex 安装
 
@@ -67,7 +67,8 @@ cp -R redthread/skills/redthread ~/.codex/skills/
 
 - 需要豆包专业版、Codex 或其他具备图片编辑或合成能力并支持 Agent Skills 的运行环境。
 - 需要由用户上传一张人物或生活方式照片。
-- 如果当前环境已有其他兼容图片后端，无需预先安装可选 Python 软件包。
+- 豆包专业版需要可用的 Python 与 Pillow；首次运行可按上述安装文字授权安装 Pillow。
+- 还需要能够保留原始像素的人物抠图或背景移除能力。
 
 ## 隐私
 
