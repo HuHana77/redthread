@@ -1,11 +1,21 @@
 ---
 name: redthread
-description: Create or revise a finished 3:4 vertical two-panel portrait collage from one user-supplied photo, with one canonical subject reused as a glowing upper silhouette and a real lower cutout, DartsFont bilingual hand-lettering, one loose wine-red colored-pencil template connector anchored to corresponding little fingers when visible or to any clear subject-contour tip otherwise, and the bundled theme fiber paper mandatorily recolored to the source-derived theme as the lower background. Produce and expose only one final PNG directly, keeping the cutout subject, connector, masks, and other intermediate assets private. Use for new photos in this recurring collage style and for changes to subject placement, theme color, typography, Japanese placement, connector anchors, connector shape or hand-drawn stroke texture, or paper color, across hosts with different image backends, including environments without an image-generation model.
+description: Create or revise a finished 3:4 vertical two-panel portrait collage from one user-supplied photo, with one canonical subject reused as a glowing upper silhouette and a real lower cutout, DartsFont bilingual hand-lettering, one loose wine-red colored-pencil template connector anchored to corresponding little fingers when visible or to any clear subject-contour tip otherwise, and the bundled theme fiber paper mandatorily recolored to the source-derived theme as the lower background. Produce and expose only one final PNG directly, keeping the cutout subject, connector, masks, and other intermediate assets private. Use for new photos in this recurring collage style and for changes to subject placement, theme color, typography, Japanese placement, connector anchors, connector shape or hand-drawn stroke texture, or paper color, across hosts with different image backends, including environments without an image-generation model. Works in Doubao Pro, Codex, and other SKILL.md hosts.
 ---
 
 # Redthread
 
 Build one finished editorial collage directly from a user photo. Preserve the real subject and deliver the inspected composition as the final image. Do not introduce an approval stage or promise a later filter version.
+
+## Doubao Pro routing — highest priority
+
+When the current host is Doubao Pro in Office Task mode, these rules override every Python example and generic backend rule below:
+
+- Route directly to Doubao Pro's already-available image editing, creative design, or image compositing capability. Do not begin by inspecting Python, scripts, packages, or the execution environment.
+- Never check for, install, upgrade, or wait for Pillow, NumPy, or any other package. Never run `pip`, `pip3`, `uv`, `conda`, `apt`, `brew`, or another package manager for this Skill.
+- Treat every bundled Python script as an optional helper for hosts that already expose a ready managed Pillow runtime. In Doubao Pro, do not select, test, or repair the Python/Pillow route.
+- Use the bundled font, paper, and connector assets through the host's native editing or compositing capability while preserving the workflow and quality gate.
+- If Doubao Pro has no available native capability that can use the required bundled assets, stop and report that the current host cannot execute the exact Redthread workflow. Do not install dependencies, wait on network installation, substitute assets, or weaken the quality gate.
 
 ## Runtime routing
 
