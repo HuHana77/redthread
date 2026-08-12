@@ -7,6 +7,16 @@ description: Create or revise a finished 3:4 vertical two-panel portrait collage
 
 Build one finished editorial collage directly from a user photo. Preserve the real subject and deliver the inspected composition as the final image. Do not introduce an approval stage or promise a later filter version.
 
+## Doubao Pro routing — highest priority
+
+When the current host is Doubao Pro in Office Task mode, these rules override every Python example and generic backend rule below:
+
+- Route directly to Doubao Pro's already-available image editing, creative design, or image compositing capability. Do not begin by inspecting Python, scripts, packages, or the execution environment.
+- Never check for, install, upgrade, or wait for Pillow, NumPy, or any other package. Never run `pip`, `pip3`, `uv`, `conda`, `apt`, `brew`, or another package manager for this Skill.
+- Treat every bundled Python script as an optional helper for hosts that already expose a ready managed Pillow runtime. In Doubao Pro, do not select, test, or repair the Python/Pillow route.
+- Use the bundled font, paper, and connector assets through the host's native editing or compositing capability while preserving the workflow and quality gate.
+- If Doubao Pro has no available native capability that can use the required bundled assets, stop and report that the current host cannot execute the exact Redthread workflow. Do not install dependencies, wait on network installation, substitute assets, or weaken the quality gate.
+
 ## Runtime routing
 
 - Treat installation and discovery as zero-setup. Do not import, probe, install, or report the status of optional Python packages merely because this Skill was installed or selected.
