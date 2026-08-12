@@ -11,11 +11,13 @@ Build one finished editorial collage directly from a user photo. Preserve the re
 
 When the current host is Doubao Pro in Office Task mode, these rules override every Python example and generic backend rule below:
 
-- Route directly to Doubao Pro's already-available image editing, creative design, or image compositing capability. Do not begin by inspecting Python, scripts, packages, or the execution environment.
-- Never check for, install, upgrade, or wait for Pillow, NumPy, or any other package. Never run `pip`, `pip3`, `uv`, `conda`, `apt`, `brew`, or another package manager for this Skill.
-- Treat every bundled Python script as an optional helper for hosts that already expose a ready managed Pillow runtime. In Doubao Pro, do not select, test, or repair the Python/Pillow route.
-- Use the bundled font, paper, and connector assets through the host's native editing or compositing capability while preserving the workflow and quality gate.
-- If Doubao Pro has no available native capability that can use the required bundled assets, stop and report that the current host cannot execute the exact Redthread workflow. Do not install dependencies, wait on network installation, substitute assets, or weaken the quality gate.
+- Use a managed Python interpreter with Pillow for deterministic rendering of the bundled font, paper, connector, and final composite. Do not use Doubao image generation, creative design generation, text-to-image, generative fill, inpainting, or model-rendered lettering for the final image.
+- Use only pixel-preserving segmentation or background removal for the canonical subject. Never recreate the person, face, hands, clothing, props, or environment with a generative model.
+- Select one managed Python executable and check Pillow exactly once with `SELECTED_PYTHON -c "from PIL import Image; print(Image.__version__)"`.
+- If Pillow is missing and the user has already authorized its installation, run `SELECTED_PYTHON -m pip install --disable-pip-version-check --no-input Pillow` once, wait for that one command to finish, and verify the same import once. The installation request in the repository README counts as explicit authorization when the user sends it unchanged.
+- If the user has not authorized installation, ask once for permission before changing the environment. Never start a second installation command, poll by rerunning installation, or try another package manager while the first command is active.
+- If no managed Python exists, Pillow installation fails, the command times out, or import verification still fails, stop and report the exact blocker. Do not fall back to image generation, substitute assets, or weaken the quality gate.
+- After Pillow is verified, run the bundled font checker, paper recoloring script, and connector renderer as specified below, then assemble the final PNG deterministically.
 
 ## Runtime routing
 
@@ -120,4 +122,5 @@ Deliver only when all are true:
 - The lower panel visibly retains `theme-fiber-paper.jpg` fibers and natural marks, recolored to the current source-derived theme.
 - The final reads clearly at full resolution and around 400 px wide.
 - Only the completed collage is exposed to the user; no cutout, mask, connector, component layer, or QA thumbnail is shown or delivered.
+- The final is a deterministic source-photo composite, not a model-generated image; it has no `豆包AI生成` watermark or any other image-generation mark.
 - No watermark, malformed text, duplicated limb, blank edge, accidental crop, paper substitution, or background island is present.
