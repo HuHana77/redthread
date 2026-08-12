@@ -7,4 +7,4 @@ description: Create or revise a finished 3:4 vertical red-thread dual-scene port
 
 This repository-level file is the direct installation entry point for Agent Skills hosts.
 
-Before performing a Redthread task, read [skills/redthread/SKILL.md](skills/redthread/SKILL.md) completely and follow it as the canonical workflow. Resolve every relative resource path in that file from `skills/redthread/`. Keep the complete repository contents available because the canonical workflow requires its bundled scripts, references, font, connector templates, and paper texture.
+Before performing a Redthread task, read [skills/redthread/SKILL.md](skills/redthread/SKILL.md) completely and follow it as the canonical workflow. Resolve every relative resource path in that file from `skills/redthread/`. Keep the complete repository contents available because the canonical workflow requires its bundled scripts, references, font, connector templates, and paper texture. In Doubao Pro, follow the canonical file's highest-priority Doubao Pro routing and never install or wait for Pillow.
