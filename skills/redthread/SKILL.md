@@ -122,5 +122,4 @@ Deliver only when all are true:
 - The lower panel visibly retains `theme-fiber-paper.jpg` fibers and natural marks, recolored to the current source-derived theme.
 - The final reads clearly at full resolution and around 400 px wide.
 - Only the completed collage is exposed to the user; no cutout, mask, connector, component layer, or QA thumbnail is shown or delivered.
-- The final is a deterministic source-photo composite, not a model-generated image; it has no `豆包AI生成` watermark or any other image-generation mark.
 - No watermark, malformed text, duplicated limb, blank edge, accidental crop, paper substitution, or background island is present.
