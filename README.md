@@ -25,7 +25,7 @@ Redthread 是一个兼容 Agent Skills 标准的图像创作 Skill，可用于�
 
 如果第一次搜索没有命中，请让豆包直接访问 GitHub 上的 `HuHana77/redthread` 仓库，不要只搜索 `redthread` 这个名称。
 
-Redthread 在豆包专业版中使用 Pillow 精确渲染内置 DartsFont、纤维纸和红线模板。首次缺少 Pillow 时只安装一次；如果安装失败或超时，任务应停止并报告原因，不得改用生图模型制作近似版本。最终图片不应出现“豆包AI生成”水印。
+Redthread 在豆包专业版中使用 Pillow 精确渲染内置 DartsFont、纤维纸和红线模板。首次缺少 Pillow 时只安装一次；如果安装失败或超时，任务应停止并报告原因，不得改用生图模型制作近似版本。
 
 ### 方式二：让 Codex 安装
 
