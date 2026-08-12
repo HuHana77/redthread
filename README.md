@@ -33,18 +33,16 @@ cp -R redthread/skills/redthread ~/.codex/skills/
 
 安装完成后，新开一个 Codex 任务。
 
-### 方式三：让支持 Skills 的豆包 Agent 安装
+### 方式三：让豆包专业版安装
 
-如果你使用的是接入豆包模型、并且支持从 GitHub 安装 `SKILL.md` 的 Agent，把下面整段文字发给它：
+在豆包专业版的办公任务模式中，直接发送：
 
 ```text
-请从 GitHub 安装 redthread Skill：
+请安装这个 Skill：
 https://github.com/HuHana77/redthread/tree/main/skills/redthread
-
-安装完成后，请确认已读取 SKILL.md，并告诉我如何调用。
 ```
 
-注意：豆包聊天客户端目前没有公开的 GitHub Skill 安装入口。只有支持 Agent Skills 的运行环境才能使用这种方式；仅在豆包聊天客户端中输入 `redthread` 不能完成安装。
+豆包专业版读取仓库中的 `SKILL.md` 后即可完成安装。安装完成后，上传照片并说“用 redthread 把这张照片制作成红线双场景拼贴”即可调用。
 
 ## 使用方式
 
