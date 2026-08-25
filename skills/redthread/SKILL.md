@@ -1,23 +1,11 @@
 ---
 name: redthread
-description: Create or revise a finished 3:4 vertical two-panel portrait collage from one user-supplied photo, with one canonical subject reused as a glowing upper silhouette and a real lower cutout, DartsFont bilingual hand-lettering, one loose wine-red colored-pencil template connector anchored to corresponding little fingers when visible or to any clear subject-contour tip otherwise, and the bundled theme fiber paper mandatorily recolored to the source-derived theme as the lower background. Produce and expose only one final PNG directly, keeping the cutout subject, connector, masks, and other intermediate assets private. Use for new photos in this recurring collage style and for changes to subject placement, theme color, typography, Japanese placement, connector anchors, connector shape or hand-drawn stroke texture, or paper color, across hosts with different image backends, including environments without an image-generation model. Works in Doubao Pro, Codex, and other SKILL.md hosts.
+description: Create or revise a finished 3:4 vertical two-panel portrait collage from one user-supplied photo, with one canonical subject reused as a glowing upper silhouette and a real lower cutout, DartsFont bilingual hand-lettering, one loose wine-red colored-pencil template connector anchored to corresponding little fingers when visible or to any clear subject-contour tip otherwise, and the bundled theme fiber paper mandatorily recolored to the source-derived theme as the lower background. Produce and expose only one final PNG directly, keeping the cutout subject, connector, masks, and other intermediate assets private. Use for new photos in this recurring collage style and for changes to subject placement, theme color, typography, Japanese placement, connector anchors, connector shape or hand-drawn stroke texture, or paper color, across hosts with different image backends, including environments without an image-generation model. Works in Codex and other SKILL.md hosts.
 ---
 
 # Redthread
 
 Build one finished editorial collage directly from a user photo. Preserve the real subject and deliver the inspected composition as the final image. Do not introduce an approval stage or promise a later filter version.
-
-## Doubao Pro routing — highest priority
-
-When the current host is Doubao Pro in Office Task mode, these rules override every Python example and generic backend rule below:
-
-- Use a managed Python interpreter with Pillow for deterministic rendering of the bundled font, paper, connector, and final composite. Do not use Doubao image generation, creative design generation, text-to-image, generative fill, inpainting, or model-rendered lettering for the final image.
-- Use only pixel-preserving segmentation or background removal for the canonical subject. Never recreate the person, face, hands, clothing, props, or environment with a generative model.
-- Select one managed Python executable and check Pillow exactly once with `SELECTED_PYTHON -c "from PIL import Image; print(Image.__version__)"`.
-- If Pillow is missing and the user has already authorized its installation, run `SELECTED_PYTHON -m pip install --disable-pip-version-check --no-input Pillow` once, wait for that one command to finish, and verify the same import once. The installation request in the repository README counts as explicit authorization when the user sends it unchanged.
-- If the user has not authorized installation, ask once for permission before changing the environment. Never start a second installation command, poll by rerunning installation, or try another package manager while the first command is active.
-- If no managed Python exists, Pillow installation fails, the command times out, or import verification still fails, stop and report the exact blocker. Do not fall back to image generation, substitute assets, or weaken the quality gate.
-- After Pillow is verified, run the bundled font checker, paper recoloring script, and connector renderer as specified below, then assemble the final PNG deterministically.
 
 ## Runtime routing
 
