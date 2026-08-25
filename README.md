@@ -1,6 +1,6 @@
 # Redthread
 
-Redthread 是一个兼容 Agent Skills 标准的图像创作 Skill，可用于豆包专业版、Codex 及其他支持 `SKILL.md` 的 Agent。它能把单张人物照片制作成 3:4 竖版红线双场景拼贴：上半部分保留原始环境，并将同一个人物剪影处理成暖白色发光轮廓；下半部分把真实人物放在从原图提取主题色的纤维纸上，再加入英日双语手写文字与酒红色彩铅红线，让两个场景形成呼应。
+Redthread 是一个兼容 Agent Skills 标准的图像创作 Skill，可用于 Codex 及其他支持 `SKILL.md` 的 Agent。它能把单张人物照片制作成 3:4 竖版红线双场景拼贴：上半部分保留原始环境，并将同一个人物剪影处理成暖白色发光轮廓；下半部分把真实人物放在从原图提取主题色的纤维纸上，再加入英日双语手写文字与酒红色彩铅红线，让两个场景形成呼应。
 
 ## 它能做什么
 
@@ -13,21 +13,7 @@ Redthread 是一个兼容 Agent Skills 标准的图像创作 Skill，可用于�
 
 ## 安装
 
-### 方式一：让豆包专业版安装（推荐）
-
-在豆包专业版的办公任务模式中，直接发送下面这句话：
-
-```text
-请安装 GitHub 上 HuHana77/redthread 仓库根目录的 redthread Skill，并读取根目录的 SKILL.md。首次运行时，如果环境缺少 Pillow，我允许你在当前任务环境中安装一次 Pillow。请使用内置字体、纸张和红线素材进行确定性合成，不要调用生图模型生成最终图片。
-```
-
-仓库根目录的 `SKILL.md` 是豆包专业版等 Agent 的直接安装入口。安装完成后，上传照片并说“用 redthread 把这张照片制作成红线双场景拼贴”即可调用。
-
-如果第一次搜索没有命中，请让豆包直接访问 GitHub 上的 `HuHana77/redthread` 仓库，不要只搜索 `redthread` 这个名称。
-
-Redthread 在豆包专业版中使用 Pillow 精确渲染内置 DartsFont、纤维纸和红线模板。首次缺少 Pillow 时只安装一次；如果安装失败或超时，任务应停止并报告原因，不得改用生图模型制作近似版本。
-
-### 方式二：让 Codex 安装
+### 方式一：让 Codex 安装
 
 直接对 Codex 说：
 
@@ -37,7 +23,7 @@ Use $skill-installer to install the skill at https://github.com/HuHana77/redthre
 
 安装完成后，在下一次 Codex 任务中即可使用。如果没有出现，请重启 Codex 后再试。
 
-### 方式三：手动安装
+### 方式二：手动安装
 
 ```bash
 git clone https://github.com/HuHana77/redthread.git
@@ -65,9 +51,8 @@ cp -R redthread/skills/redthread ~/.codex/skills/
 
 ## 使用条件
 
-- 需要豆包专业版、Codex 或其他具备图片编辑或合成能力并支持 Agent Skills 的运行环境。
+- 需要 Codex 或其他具备图片编辑或合成能力并支持 Agent Skills 的运行环境。
 - 需要由用户上传一张人物或生活方式照片。
-- 豆包专业版需要可用的 Python 与 Pillow；首次运行可按上述安装文字授权安装 Pillow。
 - 还需要能够保留原始像素的人物抠图或背景移除能力。
 
 ## 隐私
